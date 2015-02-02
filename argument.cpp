@@ -39,6 +39,7 @@ void ArgParser::__parse(int argc, const char * argv[]) {
 			}
 			o_arglist[temp].isActive = true;
 			o_arglist[temp].handler(string(argv[i+1]));
+			i += 1;
 		} else {
 			if (p_arglist_parsed == p_arglist.size()) {
 				throw "exceed positional argument limit";
